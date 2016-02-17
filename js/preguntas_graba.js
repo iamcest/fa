@@ -24,7 +24,8 @@ else
   }
 xmlhttp.onreadystatechange=function()
   {
-  if (xmlhttp.readyState==4 && xmlhttp.status==200)
+	 // alert("xmlhttp.readyState:"+xmlhttp.readyState+"-- xmlhttp.status:"+xmlhttp.status);
+	if (xmlhttp.readyState==4 && xmlhttp.status==200)
     {
     value=parseInt(xmlhttp.responseText);
 	window.localStorage.setItem("login", "true");
@@ -34,7 +35,7 @@ xmlhttp.onreadystatechange=function()
 
     }
   }
-xmlhttp.open("POST","preguntas_graba.php",true);
+xmlhttp.open("POST","http://www.swci.com.ar/fibrilacion/preguntas_graba.php",true);
 xmlhttp.setRequestHeader("Content-type","application/x-www-form-urlencoded");
 xmlhttp.send("especialidad="+especialidad+"&cantidad="+cantidad+"&tratados="+tratados);
 }else{
