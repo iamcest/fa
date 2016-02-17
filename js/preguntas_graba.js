@@ -38,9 +38,11 @@ xmlhttp.open("POST","preguntas_graba.php",true);
 xmlhttp.setRequestHeader("Content-type","application/x-www-form-urlencoded");
 xmlhttp.send("especialidad="+especialidad+"&cantidad="+cantidad+"&tratados="+tratados);
 }else{
+	document.getElementById("openModal2").click();
 }
 }
 function checkConnection() {
+//var state = navigator.connection.type;
 var state = navigator.connection.type;
 if (state == window.Connection.NONE)
 {
