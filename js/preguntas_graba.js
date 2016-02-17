@@ -11,7 +11,8 @@ if(	tratados == 0){error = error + '<p>Falta selecionar un porcentaje.</p>'}
 if(error.length > 0){
 document.getElementById("alertContent").innerHTML='<p>Te agradecemos respondas a las preguntas para descargar la App<p>'+error;
 document.getElementById("openModal").click();
-					return}		
+					return}	
+if(checkConnection()){	
 var xmlhttp;
 if (window.XMLHttpRequest)
   {// code for IE7+, Firefox, Chrome, Opera, Safari
@@ -36,5 +37,22 @@ xmlhttp.onreadystatechange=function()
 xmlhttp.open("POST","preguntas_graba.php",true);
 xmlhttp.setRequestHeader("Content-type","application/x-www-form-urlencoded");
 xmlhttp.send("especialidad="+especialidad+"&cantidad="+cantidad+"&tratados="+tratados);
-
+}else{
 }
+}
+function checkConnection() {
+var state = navigator.connection.type;
+if (state == window.Connection.NONE)
+{
+    // doesn't have internet, notify
+	return false;
+}
+else
+{
+    // has internet, continue work accessing internet
+	return true;
+}
+	/*return true;// Prueba interna*/ 
+    //alert('Connection type: ' + states[networkState]);
+}
+
