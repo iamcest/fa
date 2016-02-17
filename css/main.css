@@ -1,0 +1,332 @@
+/*@font-face {
+	font-family: 'Open Sans';
+	font-weight: 300;
+	src: url('OpenSans-Light.ttf');
+}
+@font-face {
+	font-family: 'Open Sans';
+	font-weight: 400;
+	src: url('OpenSans-Regular.ttf');
+}*/
+body * {
+	font-family: 'Open Sans', sans-serif !important;
+	font-weight: 400;
+}
+
+strong, b {
+	font-weight: bold !important;
+}
+
+.app-header {
+	background-color: #fff;
+	background-image: none;
+	border: none;
+	border-top: 5px solid #1a53a5;
+	/*border-bottom: 1px solid #c5c5c5;*/
+	-webkit-box-shadow: 0 0 15px rgba(0,0,0,.25);
+	-moz-box-shadow: 0 0 15px rgba(0,0,0,.25);
+	box-shadow: 0 0 15px rgba(0,0,0,.25);
+	padding: 4px 0;
+}
+
+.app-logo {
+	cursor: pointer;
+	height: 42px;
+	margin: 0.6em auto;
+	display: block;
+}
+.app-nav {
+	position: absolute;
+	width: 32px;
+	height: 32px;
+	top: 4px; left: 0px;
+	margin: 1.1em;
+	cursor: pointer;
+	background-image: url(../img/nav.png);
+	background-size: 32px auto;
+	background-position-y: 0px;
+}
+.ui-panel-content-wrap-position-left.ui-panel-content-wrap-open .app-nav {
+	background-position-y: -32px;
+}
+
+img.app-go-top {
+	position: fixed;
+	bottom: 1em;
+	right: 1em;
+	cursor: pointer;
+	width: 32px;
+	display: none;
+}
+/* Calculadora */
+.result_frame {
+	min-width: 270px;
+	margin: 20px auto;
+	max-width: 400px;
+}
+.result_container {
+	display: inline-block;
+	min-width: 120px;
+	min-height:120px;
+	width: 48%;
+	margin: 0;
+	border: 1px solid #999;
+	border-radius: 6px;
+	background-color: #FFF;
+	padding: 10px 20px 20px 20px;
+}
+.result_title {
+	color: #900;
+	font-size: 14px;
+	text-align: center;
+	padding: 0 8px;
+}
+.result_container_cuadro {
+	display: inline-block;
+	min-width: 120px;
+	min-height:120px;
+	width: 100%;
+	margin: 0;
+	border: 1px solid #999;
+	border-radius: 6px;
+	background-color: #FFF;
+	padding: 10px 20px 20px 20px;
+}
+.result_cuadro {
+	color: #000;
+	font-size: 18px;
+	text-align: center;
+	padding: 0 8px;
+	text-align:left;
+}
+
+.hemorragias_container {
+	display: inline-block;
+	min-width: 120px;
+	width: 40%;
+	margin: 0;
+	border: 1px solid #999;
+	border-radius: 6px;
+	background-color: #FFF;
+	padding: 10px 20px 20px 20px;
+}
+
+.hemorragias__cuadro {
+	color: #000;
+	font-size: 20px;
+	text-align: center;
+	padding: 0 8px;
+	text-align:left;
+}
+.result_number {
+	font-size: 36px;
+	text-align: center;
+}
+.result_number.risk_error {
+	font-size: 11px;
+	padding: 10px 0;
+}
+.result_percentage:after {
+    content: "%";
+    font-size: 50%;
+    vertical-align: super;
+    opacity: 0.7;
+}
+
+/* Reference */
+div[data-role=popup] p {
+	max-width: 640px;
+	font-size: 12px;
+	padding: 10px;
+}
+div[data-role=popup] p strong {
+	color: #000;
+}
+.ui-content a[data-rel=popup] {
+	padding: 0 10px;
+	background-color: gainsboro;
+	border-radius: 5px;
+	margin: 0 5px;
+	text-decoration: none;
+}
+
+/* CONTENT */
+.ui-content {
+	padding-bottom: 48px;
+}
+.ui-content h1 {
+	color: #1a53a5;
+	margin: 5px 0;
+	font-size: 1.6em;
+}
+.ui-content h2 {
+	font-size: 1.3em;
+}
+.ui-content p {
+	color: #000;
+	text-align: justify;
+}
+.ui-content .chapter {
+	color: #e6403c;
+	font-size: 0.7em;
+	text-transform: uppercase;
+}
+.ui-content .subtitle {
+}
+.ui-content .author {
+	color: #bb041f;
+	text-align: right;
+	font-size: 0.8em;
+	font-style: italic;
+}
+.ui-content .author:before{
+	content: "â€” ";
+}
+
+
+.ui-li-heading {
+	font-weight: 400;
+	color: #bb041f;
+	font-size: 20px;
+	margin: 4px 0 6px;
+}
+p.ui-li-desc {
+	color: #777777;
+	font-size: 13px;
+}
+
+.app-figure {
+	text-align: center;
+	margin: 0 auto;
+	max-width: 640px;
+}
+.app-figure img {
+	width: 100%;
+	max-width: 640px;
+	margin: 1em 0;
+}
+.app-figure small {
+	display: block;
+
+}
+
+/* FORM */
+div.input-line {
+	border-bottom: 1px solid rgba(0,0,255,0.15);
+	margin: 8px 0;
+	position: relative;
+	padding-bottom: 8px;
+}
+div.input-line div.ui-field-contain {
+	margin: 0;
+}
+div.input-line label.ui-slider {
+	padding: 6px 0;
+}
+div.input-label {
+	padding: 6px 0;
+}
+div.input-switch {
+	float: right;
+}
+.input-switch div.ui-slider-switch {
+	margin: 0;
+}
+div.input-radio {
+	float: right;
+}
+div.input-radio fieldset.ui-controlgroup.ui-mini {
+	margin: 1px 0;
+}
+
+/* NAV */
+#navpanel {
+	background-color: #1a202c;
+	background-image: none;
+}
+#navpanel li {
+	border-style: none;
+}
+#navpanel li.chapter a {
+	white-space: normal;
+	font-size: 14px;
+	background-color: #7f363e;
+}
+#navpanel li.chapter div.ui-li {
+	border-color: #59262b;
+}
+#navpanel li.ui-btn-up-d {
+	background-color: #32394a;
+	background-image: none;
+}
+#navpanel li.ui-btn-hover-d {
+	background-color: #262c3a;
+	background-image: none;
+}
+#navpanel a {
+	color: rgba(255,255,255,0.8);
+	text-shadow: none;
+	font-weight: 300;
+}
+#navpanel div.ui-btn-inner {
+	border-color: rgba(255,255,255,.1);
+}
+#navpanel .ui-btn {
+}
+#navpanel .ui-bar-d {
+	color: #949cad;
+	background-color: #3f4758;
+	background-image: none;
+	text-shadow: 0 1px 1px #000;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	font-size: 13px;
+	font-weight: 400;
+}
+.ui-panel-content-wrap-position-left.ui-panel-content-wrap-open {
+	-webkit-box-shadow: -10px 0 30px rgba(0,0,0,.35);
+	-moz-box-shadow: -10px 0 30px rgba(0,0,0,.35);
+	box-shadow: -10px 0 30px rgba(0,0,0,.35);
+}
+
+@media (min-width: 801px) {
+	.app-nav {
+		margin: 1.7em 5%;
+	}
+	.app-logo {
+		height: 60px;
+	}
+
+	.ui-content {
+		padding-left: 5%;
+		padding-right: 5%;
+	}
+	/* wrap on wide viewports once open */
+	
+	.ui-page-panel-open .ui-panel-content-fixed-toolbar-display-push.ui-panel-content-fixed-toolbar-position-left,
+	.ui-page-panel-open .ui-panel-content-fixed-toolbar-display-reveal.ui-panel-content-fixed-toolbar-position-left,
+	.ui-page-panel-open .ui-panel-content-wrap-display-push.ui-panel-content-wrap-position-left,
+	.ui-page-panel-open .ui-panel-content-wrap-display-reveal.ui-panel-content-wrap-position-left {
+		margin-right: 17em;
+	}
+	.ui-page-panel-open .ui-panel-content-fixed-toolbar-display-push.ui-panel-content-fixed-toolbar-position-right,
+	.ui-page-panel-open .ui-panel-content-fixed-toolbar-display-reveal.ui-panel-content-fixed-toolbar-position-right,
+	.ui-page-panel-open .ui-panel-content-wrap-display-push.ui-panel-content-wrap-position-right,
+	.ui-page-panel-open .ui-panel-content-wrap-display-reveal.ui-panel-content-wrap-position-right {
+		margin-left: 17em;
+	}
+	.ui-page-panel-open .ui-panel-content-fixed-toolbar-display-push,
+	.ui-page-panel-open .ui-panel-content-fixed-toolbar-display-reveal {
+		width: auto;
+	}
+	
+	/* disable "dismiss" on wide viewports */
+	.ui-panel-dismiss {
+		display: none;
+	}
+	/* same as the above but for panels with display mode "push" only */
+	.ui-panel-dismiss-display-push {
+		display: none;
+	}
+
+}

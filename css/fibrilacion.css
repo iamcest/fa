@@ -1,0 +1,242 @@
+.cuadro{
+	display:inline-block;
+	min-width:10px;
+	padding:15px 25px;
+	font-size:35px;
+	font-weight:700; 
+	line-height:1;
+	color:#fff;
+	text-align:	center;
+	white-space:nowrap;
+	vertical-align:middle;
+	background-color:#0090BB;
+	}
+	   
+.linea {
+	background-color: #0090BB;
+	height: 4px;
+	border: 0;
+	color: #0090BB;
+}
+h1.titulo
+{
+	color: #6D6E72;
+}
+h2.titulo-figura
+{
+	color: #6D6E72;
+	font-size: 16px;
+}
+h2.subtitulo
+{
+	color: #6D6E72;
+	font-size: 25px;
+	font-weight: bold;
+}
+h2.recomendada{	
+	color: #6D6E72;
+	font-size: 16px;
+	font-weight: bold;
+	}
+.letra_pie
+{
+	color:#000;
+	font-size: 18px;
+	font-style:italic;
+	}
+	
+p.sangria{
+    position: absolute;
+    padding-left: 40px;
+}
+p.vinieta{	
+	/*margin:0;*/
+	margin: -1px 0px 0px 0px;
+	text-indent: -22px;
+    padding-left: 33px;
+	padding-top:10px;
+}
+blockquote.vinieta{	
+	color: #6D6E72;
+	/*text-indent: -20px;
+    padding-left: 35px;*/
+	}
+
+
+li.recomendada{	
+	margin:0;
+	text-indent: -15px;
+    padding-left: 25px;
+}
+
+li.menu {
+	margin:0;
+	text-indent: -5px;
+    padding-left: 15px;
+	color: #000;
+
+}
+p.autores{
+	margin: -3px 0px 0px 0px;
+ }
+ 
+h2.autores{	
+	color: #6D6E72;
+	font-size: 20px;
+	font-weight: bold;
+	}
+/* Calculadoras */
+
+/* Calculadora */
+#calc_ext_app  .result_frame {
+	min-width: 270px;
+	margin: 20px auto;
+	max-width: 400px;
+}
+#calc_ext_app  .result_container {
+	display: inline-block;
+	min-width: 120px;
+	width: 48%;
+	margin: 0;
+	border: 1px solid #999;
+	border-radius: 6px;
+	background-color: #FFF;
+	padding: 10px 0px;
+}
+#calc_ext_app  .result_title {
+	color: #900;
+	font-size: 14px;
+	text-align: center;
+	padding: 0 8px;
+}
+#calc_ext_app .result_number {
+	font-size: 36px;
+	text-align: center;
+}
+#calc_ext_app .result_number.risk_error {
+	font-size: 11px;
+	padding: 10px 0;
+}
+#calc_ext_app .result_percentage:after {
+    content: "%";
+    font-size: 50%;
+    vertical-align: super;
+    opacity: 0.7;
+}
+
+/* Reference */
+#calc_ext_app div[data-role=popup] p {
+	max-width: 640px;
+	font-size: 12px;
+	padding: 10px;
+}
+#calc_ext_app  div[data-role=popup] p strong {
+	color: #000;
+}
+#calc_ext_app  .ui-content a[data-rel=popup] {
+	padding: 0 10px;
+	background-color: gainsboro;
+	border-radius: 5px;
+	margin: 0 5px;
+	text-decoration: none;
+}
+
+/* CONTENT */
+#calc_ext_app  .ui-content {
+	padding-bottom: 48px;
+}
+#calc_ext_app  .ui-content h1 {
+	color: #1a53a5;
+	margin: 5px 0;
+	font-size: 1.6em;
+}
+#calc_ext_app  .ui-content h2 {
+	font-size: 1.3em;
+}
+#calc_ext_app  .ui-content p {
+	color: #000;
+	text-align: justify;
+}
+#calc_ext_app  .ui-content .chapter {
+	color: #e6403c;
+	font-size: 0.7em;
+	text-transform: uppercase;
+}
+#calc_ext_app  .ui-content .subtitle {
+}
+#calc_ext_app  .ui-content .author {
+	color: #bb041f;
+	text-align: right;
+	font-size: 0.8em;
+	font-style: italic;
+}
+#calc_ext_app  .ui-content .author:before{
+	content: "â€” ";
+}
+
+
+#calc_ext_app  .ui-li-heading {
+	font-weight: 400;
+	color: #bb041f;
+	font-size: 20px;
+	margin: 4px 0 6px;
+}
+#calc_ext_app p.ui-li-desc {
+	color: #777777;
+	font-size: 13px;
+}
+
+#calc_ext_app  .app-figure {
+	text-align: center;
+	margin: 0 auto;
+	max-width: 640px;
+}
+#calc_ext_app  .app-figure img {
+	width: 100%;
+	max-width: 640px;
+	margin: 1em 0;
+}
+#calc_ext_app  .app-figure small {
+	display: block;
+
+}
+
+/* FORM */
+#calc_ext_app  div.input-line {
+	border-bottom: 1px solid rgba(0,0,255,0.15);
+	margin: 8px 0;
+	position: relative;
+	padding-bottom: 8px;
+}
+#calc_ext_app  div.input-line div.ui-field-contain {
+	margin: 0;
+}
+#calc_ext_app  div.input-line label.ui-slider {
+	padding: 6px 0;
+}
+#calc_ext_app  div.input-label {
+	padding: 6px 0;
+}
+#calc_ext_app  div.input-switch {
+	float: right;
+}
+#calc_ext_app  .input-switch div.ui-slider-switch {
+	margin: 0;
+}
+#calc_ext_app  div.input-radio {
+	float: right;
+}
+#calc_ext_app  div.input-radio fieldset.ui-controlgroup.ui-mini {
+	margin: 1px 0;
+}
+.ui-btn-inner{
+	padding-top:0px;
+}
+select{
+	color:#333;
+}
+.bayer_logo{
+	display:block;
+	float:right;
+	margin-bottom: -80px;
+}

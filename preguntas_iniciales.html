@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/> <!-- Calculadora 1 -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Fibrilaci&oacute;n Articular</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+	<link rel="stylesheet" href="css/jquery.mobile-1.3.2.min.css">
+	<link rel="stylesheet" href="css/main.css">
+ 	<script src="js/jquery-1.10.2.min.js"></script>
+	<script src="js/jquery.mobile-1.3.2.min.js"></script>
+	<script src="js/main.js"></script>
+    <link href="css/simple-sidebar.css" rel="stylesheet">
+    <link href="css/fibrilacion.css" rel="stylesheet">
+
+   
+
+</head>
+
+<body>
+
+     <div style="width:100%; background-color:#F6F6F6;">
+
+        <!-- Sidebar -->
+        <!-- /#sidebar-wrapper -->
+
+        <!-- Page Content -->
+        <div id="page-content-wrapper">
+            <div class="container-fluid">
+                <div class="row">
+                       <div id=muestra_texto>
+	<div data-role="content">
+		<h1>Encuesta inicial</h1>
+        <h6>Te agradecemos que respondas estas preguntas para comenzar a utilizar la App </h6>
+		<form id="initCal04">
+			<div class="input-line">
+				<div class="input-switch">
+                	<select name="especialidad" id="especialidad">
+						<option value="0">------------------</option>
+                        <option value="1">Cardi&oacute;logo</option>
+						<option value="2">Cl&iacute;nico</option>
+    	                <option value="3">Hemat&oacute;logo</option>
+        	            <option value="4">Otro</option>
+					</select>
+				</div>
+				<div class="input-label"><label for="especialidad">Especialidad</label></div>
+			</div>
+			<div class="input-line">
+				<div class="input-switch">
+                	<select name="cantidad" id="cantidad">
+                    	<option value="0">-------</option>
+						<option value="1">Menos de 10</option>
+						<option value="2">Entre 10 y 30</option>
+    	                <option value="3">Entre 30 y 50</option>
+        	            <option value="4">Entre  50 y 100</option>
+            	        <option value="5">M&aacute;s de 100</option>
+					</select>
+				</div>
+				<div class="input-label"><label for="cantidad">&iquest;Qu&eacute; cantidad de pacientes con FA trata al mes?</label></div>
+			</div>
+			<div class="input-line">
+				<div class="input-switch">
+                	<select name="tratados" id="tratados">
+						<option value="0">-----------</option>
+                        <option value="1">Menos del 5%</option>
+						<option value="2">Entre el 5% y el 10%</option>
+    	                <option value="3">Entre el 10% y el 30%</option>
+        	            <option value="4">Entre el 30% y el 50%</option>
+						<option value="5">M&aacute;s del 50%</option>
+					</select>
+				</div>
+				<div class="input-label"><label for="tratados">&iquest;Qu&eacute; porcentaje de esos pacientes son tratados con NOACs?</label></div>
+			</div>
+            		<button type="button" class="btn btn-primary" onClick="preguntas_graba()">Responder</button>
+            
+		</form>
+<button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal" style="display:none;" id="openModal"></button>
+
+
+	</div><!-- /content -->
+
+	<!-- <div data-role="footer">
+		<p>Copyright 2013 The jQuery Foundation</p>
+	</div> --><!-- /footer -->
+
+                        </div>
+                </div>
+            </div>
+        </div>
+        <!-- /#page-content-wrapper -->
+
+    </div>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+	<!-- Respuesta -->
+    <script src="js/preguntas_graba.js"></script>
+
+<!-- Modal -->
+<div id="myModal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header" style=" background-color: #E0E0E0;">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Completar encuesta</h4>
+      </div>
+      <div class="modal-body" id="alertContent">
+        <p>Some text in the modal.</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+
+  </div>
+</div>
+    
+    
+</body>
+
+</html>
