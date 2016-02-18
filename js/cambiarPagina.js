@@ -13,11 +13,11 @@ xmlhttp.onreadystatechange=function()
   {
 	if (xmlhttp.readyState==4)
     {
-	alert('entre por ='+xmlhttp.readyState);
+	//alert('entre por ='+xmlhttp.readyState);
     document.getElementById("muestra_texto").innerHTML=xmlhttp.responseText;
-	alert('pase la respuesta');
+	//alert('pase la respuesta');
 	document.getElementById("menu-toggle").click();
-	alert('fin');
+	//alert('fin');
     }
   }
 
