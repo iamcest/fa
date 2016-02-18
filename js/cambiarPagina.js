@@ -11,7 +11,8 @@ else
   }
 xmlhttp.onreadystatechange=function()
   {
-	 // alert("xmlhttp.readyState:"+xmlhttp.readyState+"-- xmlhttp.status:"+xmlhttp.status);
+	alert("apreto link => "+"xmlhttp.readyState:"+xmlhttp.readyState+" -- xmlhttp.status:"+xmlhttp.status);
+	alert(xmlhttp.responseText);
 	if (xmlhttp.readyState==4 && xmlhttp.status==200)
     {
     document.getElementById("muestra_texto").innerHTML=xmlhttp.responseText;
