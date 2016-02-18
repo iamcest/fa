@@ -11,12 +11,13 @@ else
   }
 xmlhttp.onreadystatechange=function()
   {
-	alert("apreto link => "+"xmlhttp.readyState:"+xmlhttp.readyState+" -- xmlhttp.status:"+xmlhttp.status);
-	alert(xmlhttp.responseText);
-	if (xmlhttp.readyState==4 && xmlhttp.status==200)
+	if (xmlhttp.readyState==4)
     {
+	alert('entre por ='+xmlhttp.readyState);
     document.getElementById("muestra_texto").innerHTML=xmlhttp.responseText;
+	alert('pase la respuesta');
 	document.getElementById("menu-toggle").click();
+	alert('fin');
     }
   }
 
