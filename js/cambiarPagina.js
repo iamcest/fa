@@ -1,7 +1,6 @@
 function cambiarPagina(pagina)
 {
 var xmlhttp;
-
 if (window.XMLHttpRequest)
   {// code for IE7+, Firefox, Chrome, Opera, Safari
   xmlhttp=new XMLHttpRequest();
@@ -12,7 +11,8 @@ else
   }
 xmlhttp.onreadystatechange=function()
   {
-  if (xmlhttp.readyState==4 && xmlhttp.status==200)
+	 // alert("xmlhttp.readyState:"+xmlhttp.readyState+"-- xmlhttp.status:"+xmlhttp.status);
+	if (xmlhttp.readyState==4 && xmlhttp.status==200)
     {
     document.getElementById("muestra_texto").innerHTML=xmlhttp.responseText;
 	document.getElementById("menu-toggle").click();
@@ -21,5 +21,5 @@ xmlhttp.onreadystatechange=function()
 
 	xmlhttp.open("POST",pagina,true);
 	xmlhttp.setRequestHeader("Content-type","application/x-www-form-urlencoded");
-	xmlhttp.send();
+	xmlhttp.send("especialidad=vacia");
 }
