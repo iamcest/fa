@@ -12,7 +12,12 @@ body * {
 	font-family: 'Open Sans', sans-serif !important;
 	font-weight: 400;
 }
-
+@media (max-width:340px){
+	body {
+  		zoom: 85%;
+		}
+	
+	}
 strong, b {
 	font-weight: bold !important;
 }
@@ -74,6 +79,7 @@ img.app-go-top {
 	border-radius: 6px;
 	background-color: #FFF;
 	padding: 10px 20px 20px 20px;
+	float: left;
 }
 .result_title {
 	color: #900;
@@ -94,7 +100,6 @@ img.app-go-top {
 }
 .result_cuadro {
 	color: #000;
-	font-size: 18px;
 	text-align: center;
 	padding: 0 8px;
 	text-align:left;
