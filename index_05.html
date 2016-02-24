@@ -172,19 +172,33 @@ anticoagulantes que padece una hemorragia cerebral?</a></li>
 			<div class="input-line">
 				<div class="input-switch"><select name="intervencion" id="intervencion">
 					<option value="0">---</option>
-					<option value="2">Ablaci&oacute;n de venas pulmonares; ablaci&oacute;n de taquicardias ventriculares</option>
-                    <option value="2">Anestesia espinal o epidural; punci&oacute;n lumbar</option>
+					<option value="2">Ablaci&oacute;n de venas pulmonares</option>
+                    <option value="2">Ablaci&oacute;n de taquicardias ventriculares</option>
+                    <option value="1">Ablaci&oacute;n por radifrecuencia de TPS</option>
+                    <option value="2">Anestesia espinal o epidural</option>
                     <option value="1">Angiograf&iacute;a</option>
                     <option value="2">Biopsia hep&aacute;tica</option>
-					<option value="1">Biopsia por endoscopía</option>
-                    <option value="1">Biopsia prostática o vesical</option>
+					<option value="1">Biopsia por endoscop&iacute;a</option>
+                    <option value="1">Biopsia prost&aacute;tica</option>
+                    <option value="1">Biopsia vesical</option>
                     <option value="2">Biopsia renal</option>
                     <option value="2">Cirug&iacute;a abdominal</option>
+					<option value="3">Cirug&iacute;a de cataratas</option>
+					<option value="3">Cirug&iacute;a de glaucoma</option>
                     <option value="2">Cirug&iacute;a ortop&eacute;dica mayor</option>
+					<option value="3">Cirug&iacute;a periodontal</option>
+					<option value="3">Cirug&iacute;a superficial de piel</option>
                     <option value="2">Cirug&Iacute;a torácica</option>
+					<option value="3">Endoscop&iacute;a sin cirugía</option>
                     <option value="1">Estudio electrofisiol&oacute;gico</option>
-                    <option value="1">Implante de marcapasos o cardiodesfibrilador implantable</option>
+					<option value="3">Extracci&oacute;n de 1 a 3 dientes</option>
+                    <option value="1">Implante de cardiodesfibrilador implantable</option>
+                    <option value="1">Implante de marcapasos</option>
+					<option value="3">Incisi&oacute;n de absceso</option>
+					<option value="3">Posicionamiento de implante dental</option>
+                    <option value="2">punci&oacute;n lumbar</option>
 					<option value="2">Resecci&oacute;n prost&aacute;tica transuretral</option>
+
 				</select></div>
 				<div class="input-label"><label for="intervencion">Tipo de Intervenci&oacute;n</label></div>
 			</div>
@@ -216,9 +230,9 @@ anticoagulantes que padece una hemorragia cerebral?</a></li>
 				<div class="result_title">Recomendaciones</div>
                 </br>
                 <div id="initCal09_score"></div>
-                <div id="initCal10_score"></div>
-                <div id="initCal11_score"></div>
+                <!-- <div id="initCal10_score"></div> -->
 				<div id="initCal12_score"></div>
+                <div id="initCal11_score"></div>
 				
 			</div><p>Basado en EHJ 2013;34:2094</p>
 		</div>
@@ -229,49 +243,49 @@ function result_initCal05 () {
 	var farmaco=document.getElementById("farmaco").value;
 	var creatinina=document.getElementById("creatinina").value;
 	//alert('creatinina =  '+creatinina+' Farmaco = '+farmaco+' Intervencion = '+intervencion);
-	var _r = ' ';
-	var _s = ' ';
-	//var _t = ' ';
-	var _v = ' ';
+	var _r = '';
+	var _s = '';
+	var _v = '';
 	
-	if(intervencion == 1){var _t = 'Suspender ACO 24 hs Previas';var _r = 'Se trata de una intervención con riesgo de sangrado bajo.';var _v = 'Considerar el riesgo de sangrado frente al riesgo de tromboembolismo.'}
-	if(intervencion == 2){var _t = 'Suspender ACO 48 hs Previas.';var _r = 'Se trata de una intervención con riesgo de sangrado alto.';var _v = 'Para reiniciar el anticoagulante se sugiere 6-8 hs después de una hemostasia completa.'}
+	if(intervencion == 1){var _r = 'Se trata un procedimiento de bajo riesgo de sangrado.';var _v = 'Se recomienda reiniciar a las 6 a 8 horas  después de una hemostasia completa.'}
+	if(intervencion == 2){var _r = 'Se trata de una intervención con riesgo de sangrado alto.';var _v = 'Para reiniciar considerar el riesgo de sangrado frente al riesgo de tromboembolismo.'}
+	if(intervencion == 3){var _r = 'Se trata un procedimiento de muy bajo riesgo de sangrado.';var _v = ' '}
+		
+	if(farmaco == 1 && creatinina > 1 && intervencion == 2){var _s = 'Se sugiere intervenir 48 horas luego de la última dosis.';}
+	if(farmaco == 1 && creatinina == 2 && intervencion == 1){var _s ='Se sugiere intervenir 36 horas luego de la última dosis.';}
+	if(farmaco == 1 && creatinina == 3 && intervencion == 1){var _s = 'Se sugiere intervenir 24 horas luego de la última dosis.';}
+	if(farmaco == 1 && creatinina == 4 && intervencion == 1){var _s = 'Se sugiere intervenir 24 horas luego de la última dosis.';}
+	if(farmaco == 1 && creatinina == 5 && intervencion == 1){var _s = 'Se sugiere intervenir 24 horas luego de la última dosis.';}
+	if(farmaco == 1 && intervencion == 3 ){var _s = 'Se sugiere intervenir 12 horas luego de la última dosis.';}
 	
-	if(creatinina == 1){var _s = 'No hay indicación para el uso de los NACOs.';}// Solo dice eso
+	if(farmaco == 2 && creatinina == 2 && intervencion == 1){var _s = 'El uso de dabigatran no está indicado con este Clearence de Creatinina';var _v = ''}
+	if(farmaco == 2 && creatinina == 3 && intervencion == 1){var _s = 'Se sugiere intervenir 48 horas luego de la última dosis.';}
+	if(farmaco == 2 && creatinina == 4 && intervencion == 1){var _s = 'Se sugiere intervenir 36 horas luego de la última dosis.';}
+	if(farmaco == 2 && creatinina == 5 && intervencion == 1){var _s = 'Se sugiere intervenir 24 horas luego de la última dosis.';}
+	if(farmaco == 2 && creatinina == 2 && intervencion == 2){var _s = 'El uso de dabigatran no está indicado con este Clearence de Creatinina.';var _v = '';}
+	if(farmaco == 2 && creatinina == 3 && intervencion == 2){var _s = 'Se sugiere intervenir 96 horas luego de la última dosis.';}
+	if(farmaco == 2 && creatinina == 4 && intervencion == 2){var _s = 'Se sugiere intervenir 72 horas luego de la última dosis..';}
+	if(farmaco == 2 && creatinina == 5 && intervencion == 2){var _s = 'Se sugiere intervenir 48 horas luego de la última dosis..';}
+	if(farmaco == 2 && intervencion == 3 ){var _s = 'Se sugiere intervenir 12 horas luego de la última dosis.';}	
 
-	if(farmaco == 1 && creatinina > 1 && intervencion == 2){var _s = 'Se sugiere suspender el NACO al menos 48 horas antes del procedimiento.';}
-	if(farmaco == 1 && creatinina == 2 && intervencion == 1){var _s ='Se sugiere suspender el NACO al menos 36 horas antes del procedimiento.';}
-	if(farmaco == 1 && creatinina == 3 && intervencion == 1){var _s = 'Se sugiere suspender el NACO al menos 24 horas antes del procedimiento.';}
-	if(farmaco == 1 && creatinina == 4 && intervencion == 1){var _s = 'Se sugiere suspender el NACO al menos 24 horas antes del procedimiento.';}
-	if(farmaco == 1 && creatinina == 5 && intervencion == 1){var _s = 'Se sugiere suspender el NACO al menos 24 horas antes del procedimiento.';}
+	if(farmaco == 3 && creatinina > 1 ){var _s = 'No existen datos específicos en el manejo del Edoxabán.';var _v = ' ';}
+	if(farmaco == 3 && intervencion == 3 ){var _s = 'No existen datos específicos en el manejo del Edoxabán.';var _v = ' ';}
+	if(farmaco == 3 && intervencion == 2 ){var _s = 'No existen datos específicos en el manejo del Edoxabán.';var _v = ' ';}
 
-	if(farmaco == 2 && creatinina == 2 && intervencion == 1){var _s = 'No hay indicación para el uso de Dabigatran';}
-	if(farmaco == 2 && creatinina == 3 && intervencion == 1){var _s = 'Se sugiere suspender el NACO al menos 48 horas antes del procedimiento.';}
-	if(farmaco == 2 && creatinina == 4 && intervencion == 1){var _s = 'Se sugiere suspender el NACO al menos 36 horas antes del procedimiento.';}
-	if(farmaco == 2 && creatinina == 5 && intervencion == 1){var _s = 'Se sugiere suspender el NACO al menos 24 horas antes del procedimiento.';}
-	if(farmaco == 2 && creatinina == 2 && intervencion == 2){var _s = 'No hay indicación para el uso de Dabigatran';}
-	if(farmaco == 2 && creatinina == 3 && intervencion == 2){var _s = 'Se sugiere suspender el NACO al menos 96 horas antes del procedimiento.';}
-	if(farmaco == 2 && creatinina == 4 && intervencion == 2){var _s = 'Se sugiere suspender el NACO al menos 72 horas antes del procedimiento.';}
-	if(farmaco == 2 && creatinina == 5 && intervencion == 2){var _s = 'Se sugiere suspender el NACO al menos 48 horas antes del procedimiento.';}
-
-	if(farmaco == 3 && creatinina > 1 ){var _s = 'No hay datos acerca de cuando suspender.';}
-
-	if(farmaco == 4 && creatinina == 2 && intervencion == 1){var _s = 'Se sugiere suspender el NACO al menos 36 horas antes del procedimiento.';}
-	if(farmaco == 4 && creatinina == 3 && intervencion == 1){var _s = 'Se sugiere suspender el NACO al menos 24 horas antes del procedimiento.';}
-	if(farmaco == 4 && creatinina == 4 && intervencion == 1){var _s = 'Se sugiere suspender el NACO al menos 24 horas antes del procedimiento.';}
-	if(farmaco == 4 && creatinina == 5 && intervencion == 1){var _s = 'Se sugiere suspender el NACO al menos 24 horas antes del procedimiento.';}
-	if(farmaco == 4 && creatinina == 2 && intervencion == 2){var _s = 'Se sugiere suspender el NACO al menos 48 horas antes del procedimiento.';}
-	if(farmaco == 4 && creatinina == 3 && intervencion == 2){var _s = 'Se sugiere suspender el NACO al menos 48 horas antes del procedimiento.';}
-	if(farmaco == 4 && creatinina == 4 && intervencion == 2){var _s = 'Se sugiere suspender el NACO al menos 48 horas antes del procedimiento.';}
-	if(farmaco == 4 && creatinina == 5 && intervencion == 2){var _s = 'Se sugiere suspender el NACO al menos 48 horas antes del procedimiento.';}
-
-	//if(creatinina > 1){$('#initCal05_score').text(_s).removeClass("risk_error");}
-	//if(creatinina == 1){$('#initCal05_score').html(_s).addClass("risk_error")}
-	//$('#initCal05_risk').html(_t).addClass("risk_error");
-	//$('#initCal05_rein').html(_v).addClass("risk_error");
-	//$('#initCal05_riesgo').text(_r);
+	if(farmaco == 4 && creatinina == 2 && intervencion == 1){var _s = 'Se sugiere intervenir 36 horas luego de la última dosis.';}
+	if(farmaco == 4 && creatinina == 3 && intervencion == 1){var _s = 'Se sugiere intervenir 24 horas luego de la última dosis.';}
+	if(farmaco == 4 && creatinina == 4 && intervencion == 1){var _s = 'Se sugiere intervenir 24 horas luego de la última dosis.';}
+	if(farmaco == 4 && creatinina == 5 && intervencion == 1){var _s = 'Se sugiere intervenir 24 horas luego de la última dosis.';}
+	if(farmaco == 4 && creatinina == 2 && intervencion == 2){var _s = 'Se sugiere intervenir 48 horas luego de la última dosis.';}
+	if(farmaco == 4 && creatinina == 3 && intervencion == 2){var _s = 'Se sugiere intervenir 48 horas luego de la última dosis.';}
+	if(farmaco == 4 && creatinina == 4 && intervencion == 2){var _s = 'Se sugiere intervenir 48 horas luego de la última dosis.';}
+	if(farmaco == 4 && creatinina == 5 && intervencion == 2){var _s = 'Se sugiere intervenir 48 horas luego de la última dosis.';}
+	if(farmaco == 4 && intervencion == 3 ){var _s = 'Se sugiere intervenir 24 horas luego de la última dosis.';}
+	
+	if(creatinina == 1){var _s = 'No hay indicación para el uso de NACOs dado el Clearence de Creatinina < 15 mL/min.';var _r = '';var _v = ''}// Solo dice eso
+	//alert(farmaco+' '+creatinina+' '+intervencion);
+	if(farmaco == 0 || creatinina == 0 || intervencion == 0){var _s = '';var _r = '';var _v = ''}
 	$('#initCal09_score').text(_r);
-	//$('#initCal10_score').text(_t);
 	$('#initCal11_score').text(_v);
 	$('#initCal12_score').text(_s);
 }
