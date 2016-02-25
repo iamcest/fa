@@ -78,14 +78,14 @@ img.app-go-top {
 	border: 1px solid #999;
 	border-radius: 6px;
 	background-color: #FFF;
-	padding: 10px 20px 20px 20px;
+	padding: 0px 0px 0px 0px;
 	float: left;
 }
 .result_title {
 	color: #900;
 	font-size: 14px;
 	text-align: center;
-	padding: 0 8px;
+	padding: 0 0px;
 }
 .result_container_cuadro {
 	display: inline-block;
