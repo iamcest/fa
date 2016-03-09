@@ -16,8 +16,6 @@ if(checkConnection()){
 var especialidadHTML=document.getElementById("especialidad").options[especialidad].text;//options[this.selectedIndex].text
 var cantidadHTML=document.getElementById("cantidad").options[cantidad].text;
 var tratadosHTML=document.getElementById("tratados").options[tratados].text;
-alert("especialidadHTML"+especialidadHTML+"--cantidadHTML"+cantidadHTML+"--tratadosHTML"+tratadosHTML);
-return;
 window.analytics.trackEvent('Prguntas Iniciales', 'Especialidad', especialidadHTML, 1);	
 window.analytics.trackEvent('Prguntas Iniciales', 'Cantidad de Pacientes con FA', cantidadHTML, 1);	
 window.analytics.trackEvent('Prguntas Iniciales', 'Porcentaje tratados con NACOs', tratadosHTML, 1);	
