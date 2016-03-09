@@ -1,17 +1,17 @@
 <?xml version='1.0' encoding='utf-8' ?>
 <widget xmlns     = "http://www.w3.org/ns/widgets"
         xmlns:gap = "http://phonegap.com/ns/1.0"
-        id        = "com.fibrilacion_auricular"
+        id        = "com.FARespuestas"
         version   = "1.0.0">
 
-    <name>Fibrilacion auricular</name>
+    <name>FA Respuestas</name>
 
     <description>
-        Fibrilacion auricular App, es una App
+        FA Respuestas App, es una herramienta de trabajo e información en el campo de la fibrilación auricular
     </description>
 
     <author href="http://www.cenpec.com.ar" email="info@cenpec.com.ar">
-        Fibrilacion auricular
+        CENPEC
     </author>
 	<preference name="permissions"                value="none"/>
 

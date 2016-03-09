@@ -10,7 +10,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Fibrilaci&oacute;n Articular</title>
+    <title>Fibrilaci&oacute;n Auricular</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -80,7 +80,7 @@
 						<option value="5">M&aacute;s del 50%</option>
 					</select>
 				</div>
-				<div class="input-label"><label for="tratados">&iquest;Qu&eacute; porcentaje de esos pacientes son tratados con NOACs?</label></div>
+				<div class="input-label"><label for="tratados">&iquest;Qu&eacute; porcentaje de esos pacientes son tratados con NACOs?</label></div>
 			</div>
             		<button type="button" class="btn btn-primary" onClick="preguntas_graba()">Responder</button>
             
@@ -148,5 +148,11 @@
 </div>   
     
 </body>
-
+<script>
+document.addEventListener('deviceready', function () {
+    // Analytics para club House
+	window.analytics.startTrackerWithId('UA-70907455-2');// Analytics para Fa Respuestas
+	window.analytics.trackView('Pantalla Preguntas Iniciales');
+}, false);
+</script>
 </html>

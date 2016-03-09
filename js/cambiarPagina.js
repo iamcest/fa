@@ -17,6 +17,8 @@ xmlhttp.onreadystatechange=function()
     document.getElementById("muestra_texto").innerHTML=xmlhttp.responseText;
 	//alert('pase la respuesta');
 	document.getElementById("menu-toggle").click();
+	window.analytics.trackEvent('Cambio de capitulo', 'Capitulos Abiertos', pagina.substring(0, pagina.length - 5), 1);
+	window.analytics.trackView('Pantalla Capitulo: '+pagina.substring(0, pagina.length - 5));
 	//alert('fin');
     }
   }
