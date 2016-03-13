@@ -21,7 +21,14 @@ body * {
 strong, b {
 	font-weight: bold !important;
 }
-
+.app-aprobal{
+	display:block;
+	position:absolute;
+	right:0;
+	bottom:0;
+	font-size:10px;
+	color:#333;
+}
 .app-header {
 	background-color: #fff;
 	background-image: none;
@@ -72,13 +79,13 @@ img.app-go-top {
 .result_container {
 	display: inline-block;
 	min-width: 130px;
-	min-height:130px;
+	min-height:135px;
 	width: 48%;
 	margin: 0;
 	border: 1px solid #999;
 	border-radius: 6px;
 	background-color: #FFF;
-	padding: 0px 0px 0px 0px;
+	padding: 10px;
 	float: left;
 }
 .result_title {

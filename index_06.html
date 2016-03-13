@@ -35,16 +35,16 @@
         <!-- Sidebar -->
         <div id="sidebar-wrapper">
             <ul>
-             <li class="calculadora" style="text-align: center; font-size:12px; color:#FF00FF">CALCULADORAS</li>
+             <li class="calculadora" style="text-align: center; font-size:12px; color:#F3268B">CALCULADORAS</li>
             <li class="calculadora"><a href="#" onClick="cambiarCalculadora('index_01.html');">Clearence de creatinina</a></li>
             <li class="calculadora"><a href="#" onClick="cambiarCalculadora('index_02.html');">CHADS<sub>2</sub>VASC<sub>2</sub></a></li>
             <li class="calculadora"><a href="#" onClick="cambiarCalculadora('index_03.html');">HAS-BLED</a></li>
             <li class="calculadora"><a href="#" onClick="cambiarCalculadora('index_04.html');">CHADS<sub>2</sub></a></li>
-            <li class="algoritmo" style="text-align: center;font-size:12px; color:#FF00FF">ALGORITMOS CON NACOs</li>
-            <li class="algoritmo"><a href="#" onClick="cambiarCalculadora('index_05.html');">MANEJO ANTE INTERVENCIONES</sub></a></li>
-            <li class="algoritmo"><a href="#" onClick="cambiarCalculadora('index_06.html');">C&Oacute;MO PASAR A NACOs</sub></a></li>
-            <li class="algoritmo"><a href="#" onClick="cambiarCalculadora('index_07.html');">MANEJO DE HEMORRAGIAS</sub></a></li>
-			<li style="text-align: center; color:#1a53a5;font-size:12px; color:#FF00FF">CAP&Iacute;TULOS</li>
+            <li class="algoritmo" style="text-align: center;font-size:12px; color:#F3268B">ALGORITMOS CON NACOs</li>
+            <li class="algoritmo"><a href="#" onClick="cambiarCalculadora('index_05.html');">MANEJO ANTE INTERVENCIONES</a></li>
+            <li class="algoritmo"><a href="#" onClick="cambiarCalculadora('index_06.html');">C&Oacute;MO PASAR A NACOs</a></li>
+            <li class="algoritmo"><a href="#" onClick="cambiarCalculadora('index_07.html');">MANEJO DE HEMORRAGIAS</a></li>
+			<li style="text-align: center; color:#1a53a5;font-size:12px; color:#F3268B">CAP&Iacute;TULOS</li>
             <li><a onClick="cambiarPagina('prologo.html');">PR&Oacute;LOGO<span class="sr-only">(current)</span></a></li>
             <li><a onClick="cambiarPagina('autores.html');">AUTORES</a></li>
             <li><a onClick="cambiarPagina('001.html');">1 &iquest;C&oacute;mo se define la fibrilaci&oacute;n auricular?</a></li>
@@ -163,7 +163,7 @@ anticoagulantes que padece una hemorragia cerebral?</a></li>
                 <div class="row">
                 <img src="img/bayer_logo.png" width="52" height="52" class="bayer_logo">
                     <div class="col-lg-12">
- 						<a href="#menu-toggle" class="btn btn-default" id="menu-toggle" style="border:none;"><img src="img/menu.png" width="52" height="47" style="display:inline-block; float:left;"><div style="line-height: 1;">  Calculadoras</br> Algoritmos</br> Cap&iacute;tulos</div></a>
+ 						<a href="#menu-toggle" class="btn btn-default" id="menu-toggle" style="border:none;"><img src="img/menu.png" width="52" height="47" style="display:inline-block; float:left;"><div style="line-height: 1;">  Calculadoras Algoritmos Cap&iacute;tulos</div></a>
                        <div id="muestra_texto">
 	<div data-role="content">
 		<h1>Pasaje de AVK a NACOs</h1>
@@ -182,11 +182,19 @@ anticoagulantes que padece una hemorragia cerebral?</a></li>
 		<div class="result_frame">
 			<div class="result_container" style="min-width:220px;width: 100%;">
 				<div class="result_title">Recomendaciones</div>
-                </br>
+                
 				<div id="initCal05_score"></div>
 				
 			</div><p>Basado en EHJ 2013;34:2094</p>
-            <p>Para pasar de NACOs a AVK, iniciar el tratamiento con AVK junto al NACO y medir RIN. Cuando el RIN sea &ge; 2.0, interrumpir el NACO y proseguir con el AVK.
+            <h1>Pasaje de NACOs a AVK</h1>
+        <div class="result_frame">
+			<div class="result_container" style="min-width:220px;width: 100%;">
+				<div class="result_title">Recomendaciones</div>
+                
+                <div id="initCal17_score">Iniciar el tratamiento con AVK junto al NACO y medir RIN. Cuando el RIN sea ≥ 2.0, interrumpir el NACO y proseguir con el AVK.
+</div>
+				
+			</div><p>Basado en EHJ 2013;34:2094</p>
 		</div>
 			
 
@@ -244,15 +252,15 @@ $(function () {
         $("#wrapper").toggleClass("toggled");
     });
     </script>
-    <script>
+    
+    
+    
+</div><script>
 document.addEventListener('deviceready', function () {
     // Analytics para club House
 	window.analytics.startTrackerWithId('UA-70907455-2');// Analytics para Fa Respuestas
 	window.analytics.trackView('Pantalla Algoritmo Pasar a NACOs');
 }, false);
-</script>
-    
-    
-</body>
+</script></body>
 
 </html>
