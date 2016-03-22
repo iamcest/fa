@@ -38,8 +38,7 @@
 
     <!-- Third party plugins -->
     <!-- A list of available plugins are available at https://build.phonegap.com/plugins -->
-	<gap:plugin name="nl.x-services.plugins.socialsharing" version="4.3.8" />
-	<!-- Calendar plug in extenciones -->
+		<!-- Calendar plug in extenciones -->
 	<!-- for iOS -->
 	<gap:plugin name="com.joandilee.imeiplugin" version="0.1" />
 	<gap:plugin name="com.badrit.backbutton" version="0.1.0" />
@@ -47,10 +46,6 @@
 	<plugin name="com.indigoway.cordova.whitelist.whitelistplugin" spec="1.1.1" source="pgb" />
 	
 	<icon src="img/logo72.png" />
-    <icon src="img/logo72.png"   gap:platform="android"    gap:density="ldpi" />
-    <icon src="img/logo72.png"   gap:platform="android"    gap:density="mdpi" />
-    <icon src="img/logo114.png"   gap:platform="android"    gap:density="hdpi" />
-    <icon src="img/logo144.png"  gap:platform="android"    gap:density="xhdpi" />
     <icon src="img/logo57.png"            gap:platform="ios"        width="57" height="57" />
     <icon src="img/logo72.png"            gap:platform="ios"        width="72" height="72" />
     <icon src="img/logo114.png"         gap:platform="ios"        width="114" height="114" />
@@ -58,23 +53,16 @@
 	<icon src="img/logo76.png"            gap:platform="ios"        width="76" height="76" />
     <icon src="img/logo120.png"         gap:platform="ios"        width="120" height="120" />
     <icon src="img/logo152.png"         gap:platform="ios"        width="152" height="152" />
-    <icon src="img/logo72.png"          gap:platform="webos" />
-    <icon src="img/logo72.png"  gap:platform="winphone" />
-    <icon src="img/logo72.png" gap:platform="winphone"   gap:role="background" />
 
     <!-- Define app splash screen for each platform. -->
-    <gap:splash src="img/Default@2x.png"       gap:platform="android" gap:qualifier="port-ldpi" />
-    <gap:splash src="img/Default@2x.png"       gap:platform="android" gap:qualifier="port-mdpi" />
-    <gap:splash src="img/Default-Portrait.png"       gap:platform="android" gap:qualifier="port-hdpi" />
-    <gap:splash src="img/Default-Portrait@2x.png"      gap:platform="android" gap:qualifier="port-xhdpi" />
+
     <gap:splash src="img/Default.png"    gap:platform="ios"     width="320" height="480" />
     <gap:splash src="img/Default@2x.png" gap:platform="ios"     width="640" height="960" />
     <gap:splash src="img/Default-Portrait.png"      gap:platform="ios"     width="768" height="1024" />
 	<gap:splash src="img/Default-Portrait@2x.png"      gap:platform="ios"     width="1536" height="2048" />
     <gap:splash src="img/Default-Landscape.png"     gap:platform="ios"     width="1024" height="768" />
 	<gap:splash src="img/Default-LandscapeLeft@2x.png"     gap:platform="ios"     width="2048" height="1536" />
-	<gap:splash src="img/Default-568h@2x.png" gap:platform="ios" width="640" height="1136" />
-    <gap:splash src="img/Default@2x.png" gap:platform="winphone" />   
+	<gap:splash src="img/Default-568h@2x.png" gap:platform="ios" width="640" height="1136" /> 
 
     <access origin="*"/>
 	
