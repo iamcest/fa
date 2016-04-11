@@ -14,7 +14,7 @@ body * {
 }
 @media (max-width:340px){
 	body {
-  		zoom: 85%;
+  		/*zoom: 85%;*/
 		}
 	
 	}
