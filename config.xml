@@ -28,6 +28,8 @@
     <preference name="exit-on-suspend"            value="false" />          <!-- ios: if set to true, app will terminate when home button is pressed -->
     <preference name="show-splash-screen-spinner" value="true" />           <!-- ios: if set to false, the spinner won't appear on the splash screen during app loading -->
     <preference name="auto-hide-splash-screen"    value="true" />           <!-- ios: if set to false, the splash screen must be hidden using a JavaScript API -->
+	<preference name="android-minSdkVersion"      value="7" />              <!-- android: MIN SDK version supported on the target device. MAX version is blank by default. -->
+    <preference name="android-installLocation"    value="auto" />           <!-- android: app install location. 'auto' will choose. 'internalOnly' is device memory. 'preferExternal' is SDCard. -->
 
 
     <gap:plugin name="org.apache.cordova.battery-status" />
@@ -53,6 +55,10 @@
 	<icon src="img/logo76.png"            gap:platform="ios"        width="76" height="76" />
     <icon src="img/logo120.png"         gap:platform="ios"        width="120" height="120" />
     <icon src="img/logo152.png"         gap:platform="ios"        width="152" height="152" />
+	<icon src="img/logo72.png"   gap:platform="android"    gap:density="ldpi" />
+    <icon src="img/logo72.png"   gap:platform="android"    gap:density="mdpi" />
+    <icon src="img/logo114.png"   gap:platform="android"    gap:density="hdpi" />
+    <icon src="img/logo144.png"  gap:platform="android"    gap:density="xhdpi" />
 
     <!-- Define app splash screen for each platform. -->
 
@@ -63,6 +69,10 @@
     <gap:splash src="img/Default-Landscape.png"     gap:platform="ios"     width="1024" height="768" />
 	<gap:splash src="img/Default-LandscapeLeft@2x.png"     gap:platform="ios"     width="2048" height="1536" />
 	<gap:splash src="img/Default-568h@2x.png" gap:platform="ios" width="640" height="1136" />
+	<gap:splash src="img/Default@2x.png"       gap:platform="android" gap:qualifier="port-ldpi" />
+    <gap:splash src="img/Default@2x.png"       gap:platform="android" gap:qualifier="port-mdpi" />
+    <gap:splash src="img/Default-Portrait.png"       gap:platform="android" gap:qualifier="port-hdpi" />
+    <gap:splash src="img/Default-Portrait@2x.png"      gap:platform="android" gap:qualifier="port-xhdpi" />
 
     <access origin="*"/>
 	
