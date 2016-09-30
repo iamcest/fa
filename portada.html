@@ -52,16 +52,50 @@
         <!-- /#page-content-wrapper -->
 
     </div>
+    <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal" style="display:none;" id="openModal"></button>
+    <div id="myModal" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+    
+        <!-- Modal content-->
+        <div class="modal-content">
+          <div class="modal-header" style=" background-color: #E0E0E0;">
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <h4 class="modal-title">País de registro</h4>
+          </div>
+          <div class="modal-body">
+            <p>¿Desde que país se está registrando?</p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-primary" onClick="clickChile();">Chile</button>
+            <button type="button" class="btn btn-primary" onClick="clickArgentina();">Argentina</button>
+          </div>
+        </div>
+    
+      </div>
+    </div>
     <!-- /#wrapper -->
 	<!-- Propios -->
     <script>
 	function irASiguiente(){
 		var value = window.localStorage.getItem("login");
 		if(value=="true"){
-			window.location="index_prologo.html";
+			var pais = window.localStorage.getItem("pais");
+			if(pais=="chile"){
+				window.location="index_prologo_chile.html";
+			}else{
+				window.location="index_prologo.html";
+			}
 		}else{
-			window.location="preguntas_iniciales.html";
+			document.getElementById("openModal").click();
 		}
+	}
+	function clickArgentina(){
+		window.location="preguntas_iniciales.html";
+	}
+	function clickChile(){
+		window.localStorage.setItem("login", "true");
+		window.localStorage.setItem("pais", "chile");
+		window.location="index_prologo_chile.html";
 	}
 	</script>
 	<script src="js/cambiarPagina.js"></script>

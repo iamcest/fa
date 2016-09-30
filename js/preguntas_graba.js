@@ -35,6 +35,7 @@ xmlhttp.onreadystatechange=function()
     {
     value=parseInt(xmlhttp.responseText);
 	window.localStorage.setItem("login", "true");
+	window.localStorage.setItem("pais", "argentina");
 	//var value = window.localStorage.getItem("login");
 	window.location="index_prologo.html";
 	// ir a la pagina principal.
