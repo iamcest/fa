@@ -2,7 +2,7 @@
 <widget xmlns     = "http://www.w3.org/ns/widgets"
         xmlns:gap = "http://phonegap.com/ns/1.0"
         id        = "com.FARespuestas"
-		versionCode="95"
+		versionCode="105"
         version   = "2.3.0">
 
     <name>FA Respuestas</name>
