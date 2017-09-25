@@ -12,42 +12,14 @@ if(error.length > 0){
 document.getElementById("alertContent").innerHTML='<p>Te agradecemos respondas a las preguntas para descargar la App<p>'+error;
 document.getElementById("openModal").click();
 					return}	
-if(checkConnection()){
-var especialidadHTML=document.getElementById("especialidad").options[especialidad].text;//options[this.selectedIndex].text
-var cantidadHTML=document.getElementById("cantidad").options[cantidad].text;
-var tratadosHTML=document.getElementById("tratados").options[tratados].text;
+
 window.analytics.trackEvent('Prguntas Iniciales', 'Especialidad', especialidadHTML, 1);	
 window.analytics.trackEvent('Prguntas Iniciales', 'Cantidad de Pacientes con FA', cantidadHTML, 1);	
 window.analytics.trackEvent('Prguntas Iniciales', 'Porcentaje tratados con NACOs', tratadosHTML, 1);	
-var xmlhttp;
-if (window.XMLHttpRequest)
-  {// code for IE7+, Firefox, Chrome, Opera, Safari
-  xmlhttp=new XMLHttpRequest();
-  }
-else
-  {// code for IE6, IE5
-  xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
-  }
-xmlhttp.onreadystatechange=function()
-  {
-	 // alert("xmlhttp.readyState:"+xmlhttp.readyState+"-- xmlhttp.status:"+xmlhttp.status);
-	if (xmlhttp.readyState==4 && xmlhttp.status==200)
-    {
-    value=parseInt(xmlhttp.responseText);
-	window.localStorage.setItem("login", "true");
-	window.localStorage.setItem("pais", "argentina");
-	//var value = window.localStorage.getItem("login");
-	window.location="index_prologo.html";
-	// ir a la pagina principal.
+window.localStorage.setItem("login", "true");
+window.localStorage.setItem("pais", "argentina");
+window.location="index_prologo.html";
 
-    }
-  }
-xmlhttp.open("POST","http://www.swci.com.ar/fibrilacion/preguntas_graba.php",true);
-xmlhttp.setRequestHeader("Content-type","application/x-www-form-urlencoded");
-xmlhttp.send("especialidad="+especialidad+"&cantidad="+cantidad+"&tratados="+tratados);
-}else{
-	document.getElementById("openModal2").click();
-}
 }
 function checkConnection() {
 //var state = navigator.connection.type;
