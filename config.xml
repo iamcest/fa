@@ -2,7 +2,6 @@
 <widget xmlns     = "http://www.w3.org/ns/widgets"
         xmlns:gap = "http://phonegap.com/ns/1.0"
         id        = "com.FARespuestas"
-		versionCode="105"
         version   = "2.3.0">
 
     <name>FA Respuestas</name>
@@ -45,10 +44,6 @@
 	<icon src="img/logo76.png"            gap:platform="ios"        width="76" height="76" />
     <icon src="img/logo120.png"         gap:platform="ios"        width="120" height="120" />
     <icon src="img/logo152.png"         gap:platform="ios"        width="152" height="152" />
-	<icon src="img/logo72.png"   gap:platform="android"    gap:density="ldpi" />
-    <icon src="img/logo72.png"   gap:platform="android"    gap:density="mdpi" />
-    <icon src="img/logo114.png"   gap:platform="android"    gap:density="hdpi" />
-    <icon src="img/logo144.png"  gap:platform="android"    gap:density="xhdpi" />
 
     <!-- Define app splash screen for each platform. -->
 
@@ -59,10 +54,6 @@
     <gap:splash src="img/Default-Landscape.png"     gap:platform="ios"     width="1024" height="768" />
 	<gap:splash src="img/Default-LandscapeLeft@2x.png"     gap:platform="ios"     width="2048" height="1536" />
 	<gap:splash src="img/Default-568h@2x.png" gap:platform="ios" width="640" height="1136" />
-	<gap:splash src="img/Default@2x.png"       gap:platform="android" gap:qualifier="port-ldpi" />
-    <gap:splash src="img/Default@2x.png"       gap:platform="android" gap:qualifier="port-mdpi" />
-    <gap:splash src="img/Default-Portrait.png"       gap:platform="android" gap:qualifier="port-hdpi" />
-    <gap:splash src="img/Default-Portrait@2x.png"      gap:platform="android" gap:qualifier="port-xhdpi" />
 
     <access origin="*"/>
 
