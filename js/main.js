@@ -2,9 +2,6 @@ function initPage (t) {
 	$('div.app-nav', t).off('click').on('click', function () {
 		$("#navpanel", t).panel("toggle");
 	});
-	$('img.app-logo').off('click').on('click', function () {
-		$.mobile.changePage('index.php');
-	});
 	$('img.app-go-top').off('click').on('click', function () {
 		$("html, body").animate({ scrollTop: 0 }, 750);
 	});
